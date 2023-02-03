@@ -1,25 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float calcareaRetang (float x, float y) {
-        float area = x * y;
+struct arearetangulo {
+	float base;
+	float altura;
+};
 
-        return area;
+float calculararea (struct arearetangulo x) {
+
+        return x.base * x.altura;
 }
 
-int main() {
-        float calcareaRetang (float x, float y);
-        float base;
-        float altura;
-        float arearetang;
+int main () {
 
-        printf("Digite a base e a altura do retangulo\n");
-        scanf("%f", &base);
-        scanf("%f", &altura);
+	float calculararea (struct arearetangulo x);
+	float hA;
+	float hB;
 
-        arearetang = calcareaRetang(base, altura);
+	struct arearetangulo a;
+	a.base = 10;
+	a.altura = 20;
 
-            printf("A area do retangulo é: %f\n", arearetang);
+	struct arearetangulo b;
+	b.base = 30;
+	b.altura = 40;
 
-    return 0;
+	hA = calculararea(a);
+	hB = calculararea(b);
+
+	printf("\n%2.f é a area do retangulo A e %2.f é a Area do retangulo B\n", hA, hB);
+
+	return 0;
 }
